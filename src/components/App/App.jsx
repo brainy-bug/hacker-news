@@ -3,7 +3,13 @@ import Stories from "../Stories/Stories";
 import Buttons from "../Buttons/Buttons";
 
 function App() {
-  return <h2>hacker news starter</h2>;
+  return (
+    <>
+      <SearchForm />
+      <Buttons />
+      <Stories />
+    </>
+  );
 }
 
 export default App;
