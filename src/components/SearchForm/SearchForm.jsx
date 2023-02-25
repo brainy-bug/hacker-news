@@ -10,7 +10,7 @@ const SearchForm = () => {
   }, []);
   return (
     <form className='search-form' onSubmit={(e) => e.preventDefault()}>
-      <h2>search hacker news</h2>
+      <h2>search for anything</h2>
       <input
         ref={refContainer}
         type='text'
