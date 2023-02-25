@@ -10,7 +10,7 @@ function App() {
       <SearchForm />
       <Buttons />
       <Stories />
-      <ScrollToTop smooth={true} className='scrollToTop' />
+      <ScrollToTop smooth={true} className='scrollToTop' height='22'  />
     </>
   );
 }

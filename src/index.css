@@ -200,6 +200,9 @@ Buttons
   cursor: not-allowed;
 }
 
+.scrollToTop {
+  background: var(--clr-primary-6) !important;
+}
 /*
 =============== 
 Spinner
