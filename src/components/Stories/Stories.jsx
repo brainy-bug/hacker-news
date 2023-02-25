@@ -10,22 +10,25 @@ const Stories = () => {
     <section className='stories'>
       {hits.map((story) => {
         const { objectID, title, num_comments, url, points, author } = story;
+
         return (
           <article key={objectID} className='story'>
-            <h4 className='title'>{title}</h4>
+            <h4 className='title'>{title || "unavailable"}</h4>
             <p className='info'>
-              {points} points by <span>{author} | </span> {num_comments}{" "}
-              comments
+              {points || 0} points by <span>{author || "unavailable"} | </span>{" "}
+              {num_comments || 0} comments
             </p>
             <div>
-              <a
-                href={url}
-                className='read-link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                read more
-              </a>
+              {url && (
+                <a
+                  href={url}
+                  className='read-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  read more
+                </a>
+              )}
               <button
                 className='remove-btn'
                 onClick={() => removeStory(objectID)}
